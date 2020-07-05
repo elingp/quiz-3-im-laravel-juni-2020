@@ -15,13 +15,11 @@ class CreateArtikelsTable extends Migration
     {
         Schema::create('artikels', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('user_id');
             $table->string('judul');
             $table->string('isi');
             $table->string('slug');
             $table->string('tag');
             $table->timestamps();
-            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

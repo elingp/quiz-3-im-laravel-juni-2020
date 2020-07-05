@@ -9,27 +9,27 @@ class Artikel extends Model
 {
     public static function get_all()
     {
-        $data = DB::table('artikel')->get();
+        $data = DB::table('artikels')->get();
         return $data;
     }
     public static function get($id)
     {
-        $data = DB::table('artikel')->where('id', '=', $id)->get();
+        $data = DB::table('artikels')->where('id', '=', $id)->get();
         return $data;
     }
     public static function delete($id)
     {
-        $data = DB::table('artikel')->where('id', '=', $id)->delete();
+        $data = DB::table('artikels')->where('id', '=', $id)->delete();
         return $data;
     }
     public static function store($data)
     {
-        $new_data = DB::table('artikel')->insert($data);
+        $new_data = DB::table('artikels')->insert($data);
         return $new_data;
     }
     public static function edit($data, $id)
     {
-        $data2 = DB::table('artikel')->where('id', '=', $id)->update($data);
+        $data2 = DB::table('artikels')->where('id', '=', $id)->update($data);
         return $data2;
     }
 }
