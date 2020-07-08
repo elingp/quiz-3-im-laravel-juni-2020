@@ -17,7 +17,7 @@ class Artikel extends Model
         $data = DB::table('artikels')->where('id', '=', $id)->get();
         return $data;
     }
-    public static function delete($id)
+    public static function destroy($id)
     {
         $data = DB::table('artikels')->where('id', '=', $id)->delete();
         return $data;

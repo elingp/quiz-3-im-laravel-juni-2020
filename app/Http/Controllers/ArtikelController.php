@@ -20,7 +20,7 @@ class ArtikelController extends Controller
     }
     public function destroy($id)
     {
-        Artikel::delete($id);
+        Artikel::destroy($id);
         return redirect('/artikel');
     }
     public function edit($id)
